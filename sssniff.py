@@ -5,6 +5,9 @@ from scapy.all import *
 import numpy as np
 import dpkt
 
+
+# output two ips in ascending order, ip1<ip2
+# if ip1 == ip2, output port1<port2
 def conn(ip1, ip2, port1, port2):
 	swap = False
 
@@ -19,6 +22,8 @@ def conn(ip1, ip2, port1, port2):
 
 	return (ip1, ip2, port1, port2), swap
 
+
+# p[value of str[i]] = number of appear times of str[i]
 def dist(str):
 	p = np.zeros(256)
 	for i in str:
