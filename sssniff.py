@@ -23,13 +23,14 @@ def conn(ip1, ip2, port1, port2):
 	return (ip1, ip2, port1, port2), swap
 
 
-# p[value of str[i]] = number of appear times of str[i]
+# p[value of str[i]] = frequency of occurrence of str[i]
 def dist(str):
 	p = np.zeros(256)
 	for i in str:
 		p[ord(i)] += 1
 	return p
 
+# 
 score = {}
 blocked = {}
 thres = 15
